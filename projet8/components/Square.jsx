@@ -1,8 +1,11 @@
 import React, { useEffect, useState} from 'react';
-import { Link } from 'react-router-dom'
+import { data, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 const Square = () => {
+    let navigate = useNavigate()
+
     const [jokes, setJokes] = useState([])
     useEffect(() => {
         fetch("http://localhost:8080/api/properties", {
@@ -10,20 +13,22 @@ const Square = () => {
           .then((response) => response.json())
           .then((data) => {
             setJokes(data)
-            console.log(data);
           })
           .catch((error) => console.log(error));
       }, []);
+    
+    const coucou = (id) => {
+        console.log(id)
+        navigate("../Product/"+id)
+    }
 
     return (
         <div>
-            L'image de la maison
-            <Link to='/Product'>Le titre de la maison</Link>
             {
                 jokes.map(joke => (
                     
-                    <Link to='/Product'>{joke.title}
-                    <img src={joke.cover} alt="" /></Link>
+                    <button onClick={() => coucou(joke.id)}>{joke.title}
+                    <img src={joke.cover} alt="" /></button>
                 ))
             }
         </div>
