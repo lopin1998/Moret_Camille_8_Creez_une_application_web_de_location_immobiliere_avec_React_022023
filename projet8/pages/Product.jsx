@@ -10,34 +10,40 @@ import { useEffect, useState } from 'react';
 const Product = () => {
 
     let id = useParams()
-    console.log(id.id)
-
+    console.log(id)
+    
+    const [load, setLoad] = useState(true)
     const [productUses, setProductUses] = useState([])
     useEffect(() => {
         fetch("http://localhost:8080/api/properties/" + id.id, {
         })
             .then((response) => response.json())
             .then((data) => {
+                console.log("coucou")
                 setProductUses(data)
-                console.log(data)
+                setLoad(false)
             })
             .catch((error) => console.log(error));
     }, []);
-
+    if(load){
+        return <div>loading ...</div>
+    }
     return (
         <div>
             <Header />
             
             {
                 <div>
+                <Carrousselle data={productUses.pictures}/>
                 <p>{productUses.title}</p>
-                <a href=""><img src={productUses.cover} alt=""/></a>
+                
                 <p>{productUses.rating}</p>
                 <p>{productUses.description}</p>
+                
                 </div>
             }
 
-
+            <Deroulant data={productUses.description}/>
 
             
             <Footer />

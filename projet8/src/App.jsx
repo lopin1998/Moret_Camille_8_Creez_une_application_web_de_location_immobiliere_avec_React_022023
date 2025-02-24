@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Home from '../pages/Home';
-import Product from '../pages/product';
+import Product from '../pages/Product';
 import Propos from '../pages/Propos';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import Error from '../_utils/Error';
