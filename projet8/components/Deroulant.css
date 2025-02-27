@@ -1,0 +1,37 @@
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    height: 218px;
+    width: 582px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.titleDropdown {
+    display: flex;
+}
+
+.arrowDown {
+    background-color: black;
+    
+}
+
+.arrowUp {
+    background-color: black;
+    transform: rotate(180deg);
+}
+
+.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 218px;
+    width: 582px;
+}
+
+.close {
+    display: none;
+}

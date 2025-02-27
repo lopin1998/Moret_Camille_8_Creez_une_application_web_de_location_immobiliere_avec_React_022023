@@ -3,14 +3,13 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Carrousselle from '../components/Carrousselle';
 import Deroulant from '../components/Deroulant';
-import { useParams } from 'react-router-dom';
+import { data, useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
 
 const Product = () => {
 
     let id = useParams()
-    console.log(id)
     
     const [load, setLoad] = useState(true)
     const [productUses, setProductUses] = useState([])
@@ -19,7 +18,7 @@ const Product = () => {
         })
             .then((response) => response.json())
             .then((data) => {
-                console.log("coucou")
+                console.log(data)
                 setProductUses(data)
                 setLoad(false)
             })
@@ -28,6 +27,7 @@ const Product = () => {
     if(load){
         return <div>loading ...</div>
     }
+
     return (
         <div>
             <Header />
@@ -36,16 +36,11 @@ const Product = () => {
                 <div>
                 <Carrousselle data={productUses.pictures}/>
                 <p>{productUses.title}</p>
-                
                 <p>{productUses.rating}</p>
-                <p>{productUses.description}</p>
-                
+                <Deroulant data={[productUses.description, productUses.equipments]}/>
                 </div>
             }
 
-            <Deroulant data={productUses.description}/>
-
-            
             <Footer />
         </div>
     );

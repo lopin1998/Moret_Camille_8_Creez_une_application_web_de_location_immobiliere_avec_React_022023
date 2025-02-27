@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 
 const Carrousselle = ({ data }) => {
     const [position, setPosition] = useState(0)
-    console.log(data)
-    console.log(data[position])
     const prev = () => {
         if(position == 0){
             setPosition(data.length-1)
