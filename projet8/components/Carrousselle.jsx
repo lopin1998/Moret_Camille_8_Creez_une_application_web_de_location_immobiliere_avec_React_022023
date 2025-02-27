@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "./Carrousselle.css"
 
 const Carrousselle = ({ data }) => {
     const [position, setPosition] = useState(0)
@@ -18,9 +19,9 @@ const Carrousselle = ({ data }) => {
     return (
         <div>
             <div>{position}/{data.length}</div>
-            <img src="/assets/arrow_back.png" alt="" onClick={prev}/>
+            <img className='arrow' src="/assets/arrow_back.png" alt="" onClick={prev}/>
             <img src={data[position]} alt="" />
-            <img src="/assets/arrow_forward.png" alt="" onClick={next}/>
+            <img className='arrow' src="/assets/arrow_forward.png" alt="" onClick={next}/>
         </div>
     )
 }

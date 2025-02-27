@@ -5,7 +5,7 @@ const Header = () => {
     return (
         <div>
             <header>
-                <img src="src/assets/react.svg" alt="" />
+                <img src="/public/assets/LOGO.png" alt="" />
                 <ul>
                     <li><Link to="/Home">Acceuil</Link></li>
                     <li><Link to="/Propos">A Propos</Link></li>

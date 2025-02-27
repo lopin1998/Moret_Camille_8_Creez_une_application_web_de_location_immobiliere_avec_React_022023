@@ -5,6 +5,7 @@ import Product from '../pages/Product';
 import Propos from '../pages/Propos';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import Error from '../_utils/Error';
+import "./App.css"
 
 const App = () => {
   return (

@@ -1,6 +1,7 @@
 import React, { useEffect, useState} from 'react';
 import { data, Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import "./Square.css"
 
 
 const Square = () => {
@@ -23,12 +24,12 @@ const Square = () => {
     }
 
     return (
-        <div>
+        <div className='boxOfSquare'>
             {
                 jokes.map(joke => (
                     
-                    <button onClick={() => coucou(joke.id)}>{joke.title}
-                    <img src={joke.cover} alt="" /></button>
+                    <p className='squareImg' onClick={() => coucou(joke.id)}>{joke.title}
+                    <img src={joke.cover} alt="" /></p>
                 ))
             }
         </div>

@@ -1,0 +1,13 @@
+.squareImg img{
+    object-fit: cover;
+    max-width: 340px;
+    max-height: 340px;
+}
+
+.boxOfSquare {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 60px;
+    grid-row-gap: 30px;
+	padding: 0px 50px;
+}
