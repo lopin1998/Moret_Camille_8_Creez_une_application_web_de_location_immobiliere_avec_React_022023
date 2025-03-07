@@ -2,7 +2,6 @@ import React from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Carrousselle from '../components/Carrousselle';
-import Deroulant from '../components/Deroulant';
 import Colapse from '../components/Colapse';
 import { data, useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';

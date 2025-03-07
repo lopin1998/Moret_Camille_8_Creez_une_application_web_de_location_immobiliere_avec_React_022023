@@ -27,9 +27,10 @@ const Square = () => {
         <div className='boxOfSquare'>
             {
                 jokes.map(joke => (
-                    
-                    <p className='squareImg' onClick={() => coucou(joke.id)}>{joke.title}
-                    <img src={joke.cover} alt="" /></p>
+                    <div className='squareImg'>
+                    <p  onClick={() => coucou(joke.id)}>{joke.title}</p>
+                    <img src={joke.cover} alt=""/>
+                    </div>
                 ))
             }
         </div>

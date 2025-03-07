@@ -1,0 +1,21 @@
+.bandeauxClass {
+    max-width: 1240px;
+    position: relative;
+    padding: 50px 0px;
+}
+
+.bandeauxClass p{
+    position: absolute;
+    text-align: center;
+    left: 273px;
+    top: 78px;
+    font-size: 48px;
+    font-weight: 400;
+}
+
+.bandeauxClass img{
+    display: flex;
+    border-radius: 25px;
+    height: 223px;
+    width: 100%;
+}

@@ -1,0 +1,16 @@
+.headerClass {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 45px; 
+}
+.headerClass ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    justify-content: space-between 60px;
+    padding: 0px;
+    margin: 0px;
+}
+.headerClass li {
+    padding: 10px;
+}
