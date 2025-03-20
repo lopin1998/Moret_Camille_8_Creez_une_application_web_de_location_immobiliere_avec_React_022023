@@ -1,0 +1,24 @@
+.error404{
+    font-size: 96px;
+    font-weight: 700;
+    color: #FF6060;
+    margin-bottom: 0px;
+    padding-bottom: 113px;
+}
+.errorOups{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    color: #FF6060;
+    padding-bottom: 113px;
+}
+.styleError {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.goBackHome{
+    font-size: 14px;
+    padding-bottom: 113px;
+}
