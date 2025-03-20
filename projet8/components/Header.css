@@ -14,3 +14,16 @@
 .headerClass li {
     padding: 10px;
 }
+@media (max-width: 767.98px) {
+    .headerClass {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 0px; 
+    }
+    .imgHeader {
+        width: 145px;
+    }
+    .headerClass {
+        font-size: 12px;
+    }
+}

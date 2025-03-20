@@ -1,9 +1,9 @@
-.bandeauxClass {
+.bandeauxClassPropos {
     max-width: 1240px;
     position: relative;
 }
 
-.bandeauxClass p{
+.bandeauxClassPropos p{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,19 +13,20 @@
     font-size: 48px;
     font-weight: 400;
     border-radius: 25px;
-    background-image: url(/assets/IMG-Bandeaux.png);
+    background-image: url(/assets/IMG-BandeauxPropos.png);
 }
 
-.bandeauxClass img{
+.bandeauxClassPropos img{
     display: flex;
     border-radius: 25px;
     height: 223px;
     width: 100%;
 }
 @media (max-width: 767.98px) {
-    .bandeauxClass p {
+    .bandeauxClassPropos img{
+        display: flex;
+        border-radius: 25px;
         height: 111px;
-        font-size: 24px;
-        text-align: start;
+        width: 100%;
     }
 }

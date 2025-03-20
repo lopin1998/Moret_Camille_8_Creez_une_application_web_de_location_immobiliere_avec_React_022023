@@ -11,13 +11,13 @@
 
 .arrowBack {
     position: absolute;
-    top: 147px;
+    top: 190px;
     left: 0px;
 }
 
 .arrowForward {
     position: absolute;
-    top: 147px;
+    top: 190px;
     right: 0px;
 }
 
@@ -34,4 +34,21 @@
     position: absolute;
     bottom: 50px;
     left: 580px;
+}
+@media (max-width: 767.98px) {
+    .styleCarrousselle {
+        max-width: 335px;
+        max-height: 255px;
+        padding: 11px;
+    }
+    .imgCarrousselle {
+        height: 255px;
+    
+    }
+    .arrowForward {
+        top: 85px;
+    }
+    .arrowBack {
+        top: 84px;
+    }
 }

@@ -4,3 +4,11 @@
 	font-family: Montserrat;
 	font-size: 14px;
 }
+@media (max-width: 767.98px) {
+	.App {
+		max-width: 767.98px;
+		margin:auto;
+		font-family: Montserrat;
+		font-size: 14px;
+	}
+}

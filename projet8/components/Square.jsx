@@ -29,7 +29,7 @@ const Square = () => {
                 jokes.map(joke => (
                     <div className='squareImg'>
                     <p  onClick={() => coucou(joke.id)}>{joke.title}</p>
-                    <img src={joke.cover} alt=""/>
+                    <img onClick={() => coucou(joke.id)} src={joke.cover} alt=""/>
                     </div>
                 ))
             }

@@ -1,6 +1,31 @@
 .proposStyle {
     display: flex;
-    justify-content: center;
+    grid-gap: 30px;
     align-items: center;
     flex-direction: column;
+    width: 100%;
+}
+
+.bandeauxClassPropos {
+    max-width: 1240px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 223px;
+    font-family: Montserrat;
+    font-size: 48px;
+    font-weight: 400;
+    border-radius: 25px;
+    height: 223px;
+    width: 100%;
+    margin: 48px 0px;
+}
+@media (max-width: 767.98px) {
+    .bandeauxClassPropos {
+        max-width: 1240px;
+        position: relative;
+        height: 111px;
+    }
 }
