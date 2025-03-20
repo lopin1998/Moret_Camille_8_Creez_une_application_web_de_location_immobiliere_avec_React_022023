@@ -17,11 +17,11 @@ const Carrousselle = ({ data }) => {
         }
     }
     return (
-        <div>
-            <div>{position}/{data.length}</div>
-            <img className='arrow' src="/assets/arrow_back.png" alt="" onClick={prev}/>
-            <img src={data[position]} alt="" />
-            <img className='arrow' src="/assets/arrow_forward.png" alt="" onClick={next}/>
+        <div className='styleCarrousselle'>
+            <div className='count'>{position}/{data.length}</div>
+            <img className='arrowBack' src="/assets/arrow_back.png" alt="" onClick={prev}/>
+            <img className='imgCarrousselle' src={data[position]} alt="" />
+            <img className='arrowForward' src="/assets/arrow_forward.png" alt="" onClick={next}/>
         </div>
     )
 }

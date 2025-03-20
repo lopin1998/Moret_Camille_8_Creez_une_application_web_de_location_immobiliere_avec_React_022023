@@ -5,12 +5,13 @@ import Carrousselle from '../components/Carrousselle';
 import Colapse from '../components/Colapse';
 import { data, useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import "./Product.css"
 
 
 const Product = () => {
 
     let id = useParams()
-    
+
     const [load, setLoad] = useState(true)
     const [productUses, setProductUses] = useState([])
     useEffect(() => {
@@ -24,21 +25,36 @@ const Product = () => {
             })
             .catch((error) => console.log(error));
     }, []);
-    if(load){
+    if (load) {
         return <div>loading ...</div>
     }
 
     return (
-        <div>
+        <div className='productStyle'>
             <Header />
-            
+
             {
                 <div>
-                <Carrousselle data={productUses.pictures}/>
-                <p>{productUses.title}</p>
-                <p>{productUses.rating}</p>
-                <Colapse title={"Déscription"} text={productUses.description}/>
-                <Colapse title={"Equipement"} text={productUses.equipments}/>
+                    <Carrousselle data={productUses.pictures} />
+                    <p className='productTitle'>{productUses.title}</p>
+                    <p className='productLocation'>{productUses.location}</p>
+                    <div>
+                        {
+                            productUses.tags.map(joke => (
+                                <p className='productTags'>{joke}</p>
+                            ))
+                        }
+                    </div>
+                    {/* <p className='productTags'>{productUses.tags}</p> */}
+                    <div>
+                        <img src={productUses.host.picture} alt="" />
+                        <p>{productUses.host.name}</p>
+                    </div>
+                    <p>{productUses.rating}</p>
+                    <div className='productCollapse'>
+                        <Colapse title={"Déscription"} text={productUses.description} />
+                        <Colapse title={"Equipement"} text={productUses.equipments} />
+                    </div>
                 </div>
             }
 
